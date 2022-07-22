@@ -1,11 +1,90 @@
- font-family: 'Roboto', sans-serif;
-
-COLORS
-header { background-color: teal - #0fb9b1;
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-/* frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253 */
+
+.background-img {
+  background-image: url(/Users/derekcooper/turing_work/1mod/whats-for-dinner/assets/burger-friends.jpg);
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
+}
+
+h1 {
+  display: flex;
+  text-align: left;
+}
+
+.nav-header {
+  background-color: #0fb9b1;
+}
+
+.nav-input {
+  background-color: whitesmoke;
+  font-size: large;
+}
+
+.box {
+  width: 90%;
+  height: 1000px;
+  margin: 0 auto;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 
 
 
+}
+
+.box div {
+  height: 425px;
+  width: 400px;
+}
+
+.small-box1 {
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.show-random {
+  margin: auto;
+  height: 2rem;
+  width: 9rem;
+  padding: 0 2rem;
+  background: linear-gradient(-45deg, #0fb9b1, #9925ea, #db46b8, #0fb9b1);
+  background-size: 300%;
+  background-position: 90% 0;
+  color: black;
+  transition: background 0.08s;
+  margin-top: 30px;
+
+}
+
+.show-random:hover {
+  background-position: 185% 50%;
+}
+
+.small-box2 {
+  background-color: rgba(225, 225, 225, .9);
+
+}
+
+.hidden {
+  display: none !important;
+}
+
+svg {
+  margin: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+/* grey - #95a5a6;
+red - #ee5253;
+rgba(225, 225, 225, .9); */
