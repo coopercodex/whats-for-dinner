@@ -1,6 +1,11 @@
-// QuerySelectors here!
-var newSides = document.querySelector(".random-sides");
+// QuerySelectors
+var newSides = document.querySelector(".side");
+var newMains = document.querySelector(".main-dish");
+var newDesserts = document.querySelector(".dessert");
+var randomFood = document.querySelector(".random-food");
 var randomButton = document.querySelector(".show-random");
+var crockPot = document.querySelector(".crockPot");
+var menuRecipe = document.querySelector(".menu-recipe");
 
 
 var sides = [
@@ -32,7 +37,7 @@ var mains = [
   "Margarita Pizza"
 ];
 var desserts = [
-  "Desserts",
+  "Crem Brulee",
   "Apple Pie",
   "Lemon Meringue Pie",
   "Black Forest Cake",
@@ -53,21 +58,52 @@ var desserts = [
   "Eclairs"
 ]
 
-//Eventlisteners here!
-window.addEventListener("click", getRandomSide(sides));
-randomButton.addEventListener("click", getRandomSide);
-
-
-
-
+//Eventlisteners
+randomButton.addEventListener("click", getRandomFood);
 
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function getRandomSide(sides) {
-  var sideIndex = getRandomIndex(sides);
-  newSides.innerHTML = sides[sideIndex];
+function getRandomSide() {
+  var sideIndex = sides[getRandomIndex(sides)];
+  newSides.value = sideIndex;
+  if (newSides.checked) {
+    return randomFood.innerHTML = newSides.value;
+  } else {
+    return undefined;
+  }
 }
+
+function getRandomMain() {
+  var mainIndex = mains[getRandomIndex(mains)];
+  newMains.value = mainIndex;
+  if (newMains.checked) {
+    return randomFood.innerHTML = newMains.value;
+  }
+  else {
+    return undefined;
+  }
+}
+
+function getRandomDessert() {
+  var dessertIndex = desserts[getRandomIndex(desserts)];
+  newDesserts.value = dessertIndex;
+  if (newDesserts.checked) {
+    return randomFood.innerHTML = newDesserts.value;
+  } else {
+    return undefined;
+  }
+}
+
+function getRandomFood() {
+  crockPot.classList.add("hidden");
+  menuRecipe.classList.remove("hidden");
+  console.log(randomFood);
+  getRandomSide();
+  getRandomMain();
+  getRandomDessert();
+}
+
 
