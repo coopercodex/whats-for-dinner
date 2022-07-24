@@ -7,7 +7,6 @@ var randomButton = document.querySelector(".show-random");
 var crockPot = document.querySelector(".crockPot");
 var menuRecipe = document.querySelector(".menu-recipe");
 
-
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",
@@ -100,10 +99,10 @@ function getRandomDessert() {
 function getRandomFood() {
   crockPot.classList.add("hidden");
   menuRecipe.classList.remove("hidden");
-  console.log(randomFood);
   getRandomSide();
   getRandomMain();
   getRandomDessert();
 }
+
 
 
